@@ -3,7 +3,7 @@
 use Entity\Game;
 use Entity\User;
 
-require '../vendor/autoload.php';
+require './vendor/autoload.php';
 
 $userMirams = new User();
 $userMirams->id = 1;
@@ -64,8 +64,8 @@ $items = array($gameOne, $gameTwo);
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
-
             </ul>
+
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Recherche" aria-label="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
@@ -77,8 +77,12 @@ $items = array($gameOne, $gameTwo);
     <div class="container mt-5">
         <div class="row">
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/death-stranding.jpg" class="card-img-top" alt="...">
+                <?php 
+                $1 -0;
+                foreach ($items as)
+                ?>
+                <div class="card">
+                    <img src=" images/death-stranding.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Death Stranding</h5>
                         <p class="card-text">Death Stranding est un très bon jeu. Ce n'est pas parce que, pour ma part, je n'ai pas apprécié l'expérience comme je l'aurai voulu que je dois en perdre mon objectivité. </p>
@@ -87,8 +91,8 @@ $items = array($gameOne, $gameTwo);
             </div>
 
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
-                    <img src="images/uncharted-4.jpg" class="card-img-top" alt="...">
+                <div class="card">
+                    <img src=" images/uncharted-4.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Uncharted 4 thief's end</h5>
                         <p class="card-text">Je viens de finir U4 c'est objectivement le meilleur épisode de la saga à 100 lieues du mauvais goût des précédent. </p>
@@ -98,7 +102,7 @@ $items = array($gameOne, $gameTwo);
             </div>
 
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="images/shadow-OTTR.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Shadow of the tom raider</h5>
@@ -108,7 +112,7 @@ $items = array($gameOne, $gameTwo);
             </div>
 
             <div class="col-sm mt-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="images/acodyssey.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Assassin'S Creed Odyssey</h5>
@@ -118,7 +122,7 @@ $items = array($gameOne, $gameTwo);
             </div>
 
             <div class="col-sm mt-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="images/red-dead-redemption.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Red Dead Redemption 2</h5>
@@ -128,7 +132,7 @@ $items = array($gameOne, $gameTwo);
             </div>
 
             <div class="col-sm mt-5">
-                <div class="card" style="width: 18rem;">
+                <div class="card">
                     <img src="images/the-last-of-us.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">The Last Of Us</h5>
