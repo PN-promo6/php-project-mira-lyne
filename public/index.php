@@ -17,12 +17,11 @@ switch ($action) {
     case 'register':
         break;
     case 'logout':
+        // TODO faire la deconnexion
         break;
     case 'login':
         if (isset($_POST['username']) && isset($_POST['password'])) {
-            $usersWithThisLogin = $userRepo->findBy(array("nickname" => $_POST['username']));
-            // var_dump($usersWithThisLogin);
-            // var_dump($_POST);
+            $usersWithThisLogin = $userRepo->findBy(array("username" => $_POST['username']));
             if (count($usersWithThisLogin) == 1) {
                 $firstUserWithThisLogin = $usersWithThisLogin[0];
                 if ($firstUserWithThisLogin->password != ($_POST['password'])) {

@@ -35,9 +35,18 @@
             <form class="form-inline my-2 my-lg-0" method="GET">
                 <input class="form-control mr-sm-2" name="search" type="search" placeholder="Recherche" aria-label="Search">
                 <button class="btn btn-secondary my-2 my-sm-0" type="submit">Recherche</button>
-                <a class="nav-link text-white" href="/?action=login">Login <span class="sr-only">(current)</span></a>
-                <a class="nav-link text-white" href="#">Sign Up <span class="sr-only">(current)</span></a>
-
+                <?php
+                if (!isset($_SESSION['user'])) {
+                ?>
+                    <a class="nav-link text-white" href="/?action=login">Login</a>
+                    <a class="nav-link text-white" href="/?action=register">Sign Up</a>
+                <?php
+                } else {
+                ?>
+                    <a class="nav-link text-white" href="/?action=logout">Logout</a>
+                <?php
+                }
+                ?>
             </form>
         </div>
     </nav>
