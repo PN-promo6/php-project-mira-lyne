@@ -16,9 +16,15 @@ $action = $_GET["action"] ?? "display";
 switch ($action) {
     case 'register':
         break;
+
     case 'logout':
-        // TODO faire la deconnexion
+
+        if (isset($_SESSION['username'])) {
+            unset($_SESSION['username']);
+        }
+        header('Location:/?action=logout');
         break;
+
     case 'login':
         if (isset($_POST['username']) && isset($_POST['password'])) {
             $usersWithThisLogin = $userRepo->findBy(array("username" => $_POST['username']));

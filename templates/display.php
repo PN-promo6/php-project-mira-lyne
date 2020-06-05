@@ -11,7 +11,7 @@
 
 <body>
     <nav class="navbar navbar-expand-lg p-3 mb-2 bg-dark text-white">
-        <a class="navbar-brand text-white " href="#">Navbar</a>
+        <a class="navbar-brand text-white " href="#">Vidéo Game</a>
         <button class="navbar-toggler" type="button " data-toggle="collapse text-white" data-target="#navbarSupportedContent text-white" aria-controls="navbarSupportedContent text-white" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>

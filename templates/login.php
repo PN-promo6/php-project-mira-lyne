@@ -20,7 +20,7 @@
     <header class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="?">
             <img src="img/icon.png" width="30" height="30" class="d-inline-block align-top" alt="">
-            Tiny Social Network
+
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,6 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1 class="display-4">KEEP CALM & LOVE FOXES</h1>
                 <blockquote class="blockquote text-center">
                     <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua.</p>
