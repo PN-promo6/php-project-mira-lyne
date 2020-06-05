@@ -38,12 +38,12 @@
                 <?php
                 if (!isset($_SESSION['user'])) {
                 ?>
-                    <a class="nav-link text-white" href="/?action=login">Login</a>
-                    <a class="nav-link text-white" href="/?action=register">Sign Up</a>
+                    <a class="nav-link text-white" href="/login">Login</a>
+                    <a class="nav-link text-white" href="/register">Sign Up</a>
                 <?php
                 } else {
                 ?>
-                    <a class="nav-link text-white" href="/?action=logout">Logout</a>
+                    <a class="nav-link text-white" href="/logout">Logout</a>
                 <?php
                 }
                 ?>

@@ -14,7 +14,7 @@ $manager = $orm->getManager();
 $codeRepo = $orm->getRepository(Game::class);
 $userRepo = $orm->getRepository(User::class);
 
-$action = $_GET["action"] ?? "display";
+$action = substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1);
 switch ($action) {
     case 'register':
         break;
