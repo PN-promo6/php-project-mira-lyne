@@ -1,5 +1,7 @@
 <?php
 
+use Controller\AuthController;
+use Controller\HomeController;
 use Entity\Game;
 use Entity\User;
 
@@ -18,47 +20,20 @@ switch ($action) {
         break;
 
     case 'logout':
-
-        if (isset($_SESSION['user'])) {
-            unset($_SESSION['user']);
-        }
-        header('Location:/?action=display');
+        $controller = new AuthController();
+        $controller->logout();
         break;
 
     case 'login':
-        if (isset($_POST['username']) && isset($_POST['password'])) {
-            $usersWithThisLogin = $userRepo->findBy(array("username" => $_POST['username']));
-            if (count($usersWithThisLogin) == 1) {
-                $firstUserWithThisLogin = $usersWithThisLogin[0];
-                if ($firstUserWithThisLogin->password != ($_POST['password'])) {
-                    $errorMsg = "Wrong password.";
-                    include "../templates/login.php";
-                } else {
-                    $_SESSION['user'] = $usersWithThisLogin[0];
-                    header('Location:/?action=display');
-                }
-            } else {
-                $errorMsg = "Nickname doesn't exist.";
-                include "../templates/login.php";
-            }
-        } else {
-            include "../templates/login.php";
-        }
+        $controller = new AuthController();
+        $controller->login();
         break;
     case 'new':
         break;
+
     case 'display':
     default:
-        $items = array();
-        if (isset($_GET['search'])) {
-            $search = $_GET['search'];
-            if (strpos($search, "@") === 0) {
-            } else {
-                $items = $codeRepo->findBy(array("name" => $search));
-            }
-        } else {
-            $items = $codeRepo->findAll();
-        }
-        include "../templates/display.php";
+        $controller = new HomeController;
+        $controller->display();
         break;
 }
