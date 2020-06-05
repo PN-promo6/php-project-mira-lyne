@@ -19,10 +19,10 @@ switch ($action) {
 
     case 'logout':
 
-        if (isset($_SESSION['username'])) {
-            unset($_SESSION['username']);
+        if (isset($_SESSION['user'])) {
+            unset($_SESSION['user']);
         }
-        header('Location:/?action=logout');
+        header('Location:/?action=display');
         break;
 
     case 'login':
